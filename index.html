@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>TEST</title>
+</head>
+<body>
+    <div class="game-area"></div>
+    <nav>
+        <div>
+            <img src="https://cdn-icons-png.flaticon.com/512/4060/4060248.png" height="40px">
+            <div class="country">France</div>
+        </div>
+        <div>
+            <img src="https://cdn-icons-png.flaticon.com/512/605/605695.png" height="40px">
+            <div id="metal">0</div>
+        </div>
+        <div>
+            <img src="https://cdn-icons-png.flaticon.com/512/4515/4515613.png" height="40px">
+            <div id="oil">0</div>
+        </div>
+        <div>
+            <img src="https://cdn-icons-png.flaticon.com/512/2077/2077362.png" height="40px">
+            <div id="wheat">0</div>
+        </div>
+    </nav>
+
+    <main>
+        <button id="countries">Countries</button>
+        <button>Rankings</button>
+        <button id="research">Research</button>
+        <button id="build">Build</button>
+        <button id="place-troops">Place Troops</button>
+        <p style="color:white; display:none" id="remaining-troops-p">Remaining troops: <span id="remaining-troops">0</span></p>
+    </main>
+
+    <div class="countries-list">
+        <div class="countries-list-nav">
+            <div class="countries-list-nav-left">
+                <button id="exit-list">x</button>
+            </div>
+            <div class="countries-list-nav-right">
+                <p>Country</p>
+                <p>Territory</p>
+                <p>Relation</p>
+            </div>
+        </div>
+        <div class="countries-list-p"></div>
+    </div>
+
+    <div class="building-list">
+        <div class="barracks" id="barracks">
+            <div class="barracks-left">
+                    <div>
+                        <span style="font-size: 25px;">Barracks</span>
+                    </div>
+                    <div>
+                        <span style="color:gray">Time: 5s</span>
+                    </div>
+            </div>
+            <div class="barracks-right">
+                <div class="barracks-right-box">
+                    <div class="metal-price">
+                        <img src="https://cdn-icons-png.flaticon.com/512/605/605695.png" height="20px">
+                        <span>1000</span>
+                    </div>
+                    <div class="oil-price">
+                        <img src="https://cdn-icons-png.flaticon.com/512/4515/4515613.png" height="20px">
+                        <span>2000</span>
+                    </div>
+                    <div class="wheat-price">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2077/2077362.png" height="20px">
+                        <span>3000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="barracks" id="cities">
+            <div class="barracks-left">
+                    <div>
+                        <span style="font-size: 25px;">City</span>
+                    </div>
+                    <div>
+                        <span style="color:gray">Time: 5s</span>
+                    </div>
+            </div>
+            <div class="barracks-right">
+                <div class="barracks-right-box">
+                    <div class="metal-price">
+                        <img src="https://cdn-icons-png.flaticon.com/512/605/605695.png" height="20px">
+                        <span>1000</span>
+                    </div>
+                    <div class="oil-price">
+                        <img src="https://cdn-icons-png.flaticon.com/512/4515/4515613.png" height="20px">
+                        <span>2000</span>
+                    </div>
+                    <div class="wheat-price">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2077/2077362.png" height="20px">
+                        <span>3000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="barracks" id="defence">
+            <div class="barracks-left">
+                    <div>
+                        <span style="font-size: 25px;">Defence</span>
+                    </div>
+                    <div>
+                        <span style="color:gray">Time: 5s</span>
+                    </div>
+            </div>
+            <div class="barracks-right">
+                <div class="barracks-right-box">
+                    <div class="metal-price">
+                        <img src="https://cdn-icons-png.flaticon.com/512/605/605695.png" height="20px">
+                        <span>1000</span>
+                    </div>
+                    <div class="oil-price">
+                        <img src="https://cdn-icons-png.flaticon.com/512/4515/4515613.png" height="20px">
+                        <span>2000</span>
+                    </div>
+                    <div class="wheat-price">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2077/2077362.png" height="20px">
+                        <span>3000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="research">
+        <div class="research-nav">
+            <div class="research-nav-left">
+                <button>x</button>
+            </div>
+            <div class="research-nav-right">
+                Research
+            </div>
+        </div>
+        <div class="research-main">
+            <div id="research-troop">
+                <p>💂</p>
+                <button>Research</button>
+                <div class="research-prices">
+                    <div>
+                        <img src="https://cdn-icons-png.flaticon.com/512/605/605695.png" height="20px">
+                        <span>1000</span>
+                    </div>
+                    <div>
+                        <img src="https://cdn-icons-png.flaticon.com/512/4515/4515613.png" height="20px">
+                        <span>2000</span>
+                    </div>
+                    <div>
+                        <img src="https://cdn-icons-png.flaticon.com/512/2077/2077362.png" height="20px">
+                        <span>3000</span>
+                    </div>
+                </div>
+                <div class="research-progress">
+
+                </div>
+
+            </div>
+            <div id="research-officer">
+                <p>💂</p>
+                <button>Research</button>
+                <div class="research-prices">
+                    <div>
+                        <img src="https://cdn-icons-png.flaticon.com/512/605/605695.png" height="20px">
+                        <span>1000</span>
+                    </div>
+                    <div>
+                        <img src="https://cdn-icons-png.flaticon.com/512/4515/4515613.png" height="20px">
+                        <span>2000</span>
+                    </div>
+                    <div>
+                        <img src="https://cdn-icons-png.flaticon.com/512/2077/2077362.png" height="20px">
+                        <span>3000</span>
+                    </div>
+                </div>
+                <div class="research-progress">
+                    
+                </div>
+            </div>
+            <div id="research-barrack">
+                <p>💂</p>
+                <button>Research</button>
+                <div class="research-prices">
+                    <div>
+                        <img src="https://cdn-icons-png.flaticon.com/512/605/605695.png" height="20px">
+                        <span>1000</span>
+                    </div>
+                    <div>
+                        <img src="https://cdn-icons-png.flaticon.com/512/4515/4515613.png" height="20px">
+                        <span>2000</span>
+                    </div>
+                    <div>
+                        <img src="https://cdn-icons-png.flaticon.com/512/2077/2077362.png" height="20px">
+                        <span>3000</span>
+                    </div>
+                </div>
+                <div class="research-progress">
+                    
+                </div>
+            </div>
+            <div id="research-defence">
+                <p>💂</p>
+                <button>Research</button>
+                <div class="research-prices">
+                    <div>
+                        <img src="https://cdn-icons-png.flaticon.com/512/605/605695.png" height="20px">
+                        <span>1000</span>
+                    </div>
+                    <div>
+                        <img src="https://cdn-icons-png.flaticon.com/512/4515/4515613.png" height="20px">
+                        <span>2000</span>
+                    </div>
+                    <div>
+                        <img src="https://cdn-icons-png.flaticon.com/512/2077/2077362.png" height="20px">
+                        <span>3000</span>
+                    </div>
+                </div>
+                <div class="research-progress">
+                    
+                </div>
+            </div>
+            <div id="research-city">
+                <p>💂</p>
+                <button>Research</button>
+                <div class="research-prices">
+                    <div>
+                        <img src="https://cdn-icons-png.flaticon.com/512/605/605695.png" height="20px">
+                        <span>1000</span>
+                    </div>
+                    <div>
+                        <img src="https://cdn-icons-png.flaticon.com/512/4515/4515613.png" height="20px">
+                        <span>2000</span>
+                    </div>
+                    <div>
+                        <img src="https://cdn-icons-png.flaticon.com/512/2077/2077362.png" height="20px">
+                        <span>3000</span>
+                    </div>
+                </div>
+                <div class="research-progress">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="script.js"></script>
+<script src="zoom.js"></script>
+</html>
